@@ -1,12 +1,17 @@
 Tasks = new Mongo.Collection("tasks");
 
 
-if (Meteor.isClient) {
+function add(message) {
+  if (!message) {
+    message = "yolo " + Math.floor(1000 * Math.random());
+  }
   Tasks.insert({
-    text: "yolo " + Math.floor(1000 * Math.random()),
+    text: message,
     createdAt: new Date(),
   });
+}
 
+if (Meteor.isClient) {
   Template.body.helpers({
     tasks: function() {
       return Tasks.find({}, {sort: {createdAt: -1}});
