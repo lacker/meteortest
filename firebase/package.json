@@ -1,0 +1,15 @@
+{
+  "name": "firebasetest",
+  "version": "1.0.0",
+  "description": "Testing firebase",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Lacker",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^2.3.1"
+  }
+}
